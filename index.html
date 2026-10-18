@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Chetan Payyavula</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Chetan Payyavula: computer science student at the University of Cincinnati building motorsport data, simulation and visualisation tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an engineer's run sheet. Name and thesis set like a drawing title block, then project case studies
+   laid out as numbered test items with their results, then about and contact. */
+:root{
+  --bg:#eceff1; --paper:#f7f8f9; --ink:#14212d; --muted:#5d6b77; --line:#cbd3d9;
+  --red:#c2362c; --blue:#1d5fa8; --chip:#e2e8ec;
+  --display:"Saira Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1317;--paper:#141b21;--ink:#e4ebf1;--muted:#8e9ca8;--line:#26323c;--red:#ff7a6b;--blue:#72b2ff;--chip:#1c2630;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1317;--paper:#141b21;--ink:#e4ebf1;--muted:#8e9ca8;--line:#26323c;--red:#ff7a6b;--blue:#72b2ff;--chip:#1c2630;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+
+/* top bar */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.mark{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.mark span{color:var(--red)}
+nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--red)}
+
+/* title block */
+.hero{padding-block:72px 40px}
+.kicker{font-family:var(--mono);font-size:13px;color:var(--red);letter-spacing:.02em}
+h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(52px,10vw,124px);line-height:.86;letter-spacing:-.01em;margin:10px 0 20px;text-wrap:balance}
+.lede{font-size:clamp(18px,2.2vw,22px);max-width:40ch;margin:0;color:var(--ink)}
+.titleblock{margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--ink)}
+.titleblock div{padding:10px 14px;border-right:1px solid var(--ink);min-width:0}
+.titleblock div:last-child{border-right:0}
+.titleblock dt{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.titleblock dd{margin:2px 0 0;font-weight:600;font-size:15px}
+@media (max-width:720px){.titleblock{grid-template-columns:1fr 1fr}.titleblock div:nth-child(2){border-right:0}.titleblock div:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+
+/* section heads */
+section{padding-block:48px}
+.sh{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:28px}
+.sh h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.5vw,44px);text-transform:uppercase;margin:0;line-height:1}
+.sh span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* project case studies */
+.proj{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:36px;padding-block:36px;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj .no{font-family:var(--mono);font-size:13px;color:var(--red)}
+.proj h3{font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,42px);text-transform:uppercase;line-height:1;margin:4px 0 8px}
+.proj .one{font-size:18px;margin:0 0 14px}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.stack li{font-family:var(--mono);font-size:12px;background:var(--chip);border-radius:3px;padding:2px 8px}
+.proj ul.pts{margin:0 0 16px;padding-left:18px}
+.proj ul.pts li{margin:6px 0}
+.figs{display:grid;gap:10px;align-content:start}
+figure{margin:0;border:1px solid var(--line);background:var(--paper);border-radius:4px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.figs.two{grid-template-columns:1fr 1fr}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);margin:0 0 16px;background:var(--paper)}
+.results div{padding:10px 12px;border-right:1px solid var(--line)}.results div:last-child{border-right:0}
+.results b{display:block;font-family:var(--display);font-weight:800;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.results span{font-size:12.5px;color:var(--muted)}
+.links{display:flex;gap:16px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.links a{text-decoration:none;border-bottom:2px solid currentColor}
+.note{font-size:13px;color:var(--muted)}
+@media (max-width:860px){.proj{grid-template-columns:1fr}.figs.two{grid-template-columns:1fr}}
+
+/* about + method */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.cols p{margin:0 0 14px;max-width:62ch}
+.cols h3{font-family:var(--display);font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.04em;margin:0 0 10px}
+.skills{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 16px;margin:0;font-size:15px}
+.skills dt{font-family:var(--mono);font-size:12px;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.skills dd{margin:0}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);margin-top:24px}
+.contact .wrap{padding-block:56px}
+.contact h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(36px,6vw,64px);line-height:.95;margin:0 0 18px}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.contact code{font-family:var(--mono);font-size:16px;background:color-mix(in srgb,var(--bg) 12%,transparent);padding:8px 12px;border-radius:4px;user-select:all}
+.contact button,.contact a.btn{font:600 14px var(--body);background:var(--red);color:#fff;border:0;border-radius:4px;padding:10px 16px;cursor:pointer;text-decoration:none}
+.contact a.alt{background:transparent;border:1px solid color-mix(in srgb,var(--bg) 40%,transparent);color:var(--bg)}
+footer{padding-block:20px;font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Chetan <span>Payyavula</span></a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="kicker">Computer science · University of Cincinnati</div>
+    <h1>Software for<br>fast cars</h1>
+    <p class="lede">I build data, simulation and visualisation tools for motorsport: lap telemetry, race strategy, hybrid energy management and the regulations that shape the cars.</p>
+    <dl class="titleblock">
+      <div><dt>Focus</dt><dd>Motorsport data &amp; simulation</dd></div>
+      <div><dt>Studying</dt><dd>Computer science, UC</dd></div>
+      <div><dt>Builds in</dt><dd>Python · JavaScript · three.js</dd></div>
+      <div><dt>Looking for</dt><dd>Internships &amp; placements</dd></div>
+    </dl>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sh"><h2>Work</h2><span>4 projects</span></div>
+
+      <article class="proj">
+        <div>
+          <div class="no">01 · Interactive 3D site</div>
+          <h3>Aero Atlas</h3>
+          <p class="one">How Formula 1's rules shaped the cars, from the 1961 1.5-litre formula to the 2026 active-aero cars, in one interactive 3D model.</p>
+          <ul class="stack"><li>three.js</li><li>JavaScript</li><li>Procedural 3D geometry</li><li>Data research</li></ul>
+          <div class="results"><div><b>66</b><span>seasons modelled</span></div><div><b>919</b><span>team-seasons in the grid data</span></div><div><b>25</b><span>radical designs explained</span></div></div>
+          <ul class="pts">
+            <li>Builds a regulation car for every season from that year's FIA figures (width, wing spans and heights, overhangs, wheelbase, tyres, weight), with a cited source on every number and both values shown where sources disagree.</li>
+            <li>All geometry is generated in code: lofted chassis and sidepod sections, NACA-style aerofoils, lathed tyres, and era-specific details such as skirts, grooved tyres, the halo and 2026 movable wings.</li>
+            <li>"Legal box" view of the space the rules allow, an illustrative airflow view, era comparison as a ghost overlay, and every season's grid from the open F1DB dataset.</li>
+          </ul>
+          <div class="links"><a href="https://chetan-payyavula.github.io/aero-atlas/" target="_blank" rel="noopener">Open the site ↗</a></div>
+        </div>
+        <div class="figs">
+          <figure><img src="img/aero-2026.jpg" alt="Aero Atlas showing the 2026 regulation car with dimension lines for width, wheelbase, height and front wing" loading="lazy"><figcaption>2026 car with rulebook dimensions and the airflow view</figcaption></figure>
+          <figure><img src="img/aero-1992.jpg" alt="Aero Atlas showing the 1992 car inside the red legal-box overlay" loading="lazy"><figcaption>1992 car inside the space the rules allowed</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div>
+          <div class="no">02 · Full-stack web app</div>
+          <h3>Pitwall</h3>
+          <p class="one">An F1 telemetry lab: compare any drivers' laps from real timing data, replay them in 3D, and run a live strategy pit wall.</p>
+          <ul class="stack"><li>Python</li><li>FastAPI</li><li>FastF1</li><li>OpenF1</li><li>Plotly</li><li>three.js</li></ul>
+          <div class="results"><div><b>53</b><span>automated tests</span></div><div><b>4</b><span>drivers compared at once</span></div><div><b>6</b><span>analysis tabs</span></div></div>
+          <ul class="pts">
+            <li>Lap comparison from official timing data: speed, throttle, brake and gear traces, lap-time delta, track dominance, braking zones and corner-by-corner analysis. The fastest lap is always the reference.</li>
+            <li>Pit wall strategy engine: fuel-corrected tyre-degradation fits, undercut and overcut calls, rejoin position, pit window, safety car and VSC time loss, and an ERS estimate.</li>
+            <li>3D lap replay with chase, onboard and TV cameras; race replays from past data, and support for a live OpenF1 feed within its rate limits.</li>
+          </ul>
+          <p class="note">Runs on a Python server, so it is shown here with screenshots.</p>
+        </div>
+        <div class="figs">
+          <figure><img src="img/pit-telemetry.jpg" alt="Pitwall telemetry tab with speed traces of two drivers and a track map" loading="lazy"><figcaption>Telemetry: speed traces, delta and track position</figcaption></figure>
+          <div class="figs two">
+            <figure><img src="img/pit-wall.jpg" alt="Pitwall live pit wall with timing tower, track map and race control messages" loading="lazy"><figcaption>Pit wall under a safety car</figcaption></figure>
+            <figure><img src="img/pit-replay.jpg" alt="Pitwall 3D lap replay in chase camera" loading="lazy"><figcaption>3D lap replay</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div>
+          <div class="no">03 · Simulation</div>
+          <h3>Hybrid Energy-Management Simulator</h3>
+          <p class="one">How should an engine and an electric motor share the load? A simulator that tests energy-management strategies against the best possible one.</p>
+          <ul class="stack"><li>Python</li><li>NumPy</li><li>Dynamic programming</li><li>ECMS</li></ul>
+          <div class="results"><div><b>0.3–4.7%</b><span>ECMS gap to the optimum</span></div><div><b>15.8%</b><span>fuel saved on a mixed cycle</span></div><div><b>26</b><span>physics &amp; regression tests</span></div></div>
+          <ul class="pts">
+            <li>Quasi-static model of a parallel turbo-hybrid: drag, rolling resistance, Willans-line engine, MGU-K, battery equivalent circuit and an MGU-H.</li>
+            <li>Compares rule-based control, ECMS and a dynamic-programming benchmark priced fairly on stored energy. ECMS captures 92–100% of the achievable hybrid saving.</li>
+            <li>Checked the class report's claims: 280 km/h and 500 km range are two different operating points, and 500 km holds only up to about 176 km/h steady.</li>
+          </ul>
+          <div class="links"><a href="https://github.com/Chetan-Payyavula/hybrid-ems-simulator" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
+        </div>
+        <div class="figs">
+          <figure><img src="img/ems-dp.jpg" alt="Chart of each controller's fuel gap to the dynamic-programming optimum across five driving cycles" loading="lazy"><figcaption>Gap to the global optimum, by controller and cycle</figcaption></figure>
+          <figure><img src="img/ems-range.jpg" alt="Chart of range against steady speed" loading="lazy"><figcaption>Range against steady speed</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div>
+          <div class="no">04 · Engineering design</div>
+          <h3>Petrol Turbo-Hybrid Powertrain</h3>
+          <p class="one">A class project to design a vehicle powertrain, taken from concept to CAD model and scale build.</p>
+          <ul class="stack"><li>CAD</li><li>Vehicle dynamics</li><li>Technical report</li></ul>
+          <ul class="pts">
+            <li>Ruled out an early self-charging wind-turbine concept on conservation of energy: pulling energy from the car's own airflow costs more drag than it recovers.</li>
+            <li>Sized power at speed from the drag power equation P = ½ρC<sub>d</sub>Av³, then iterated through combustion, battery-electric and hybrid layouts.</li>
+            <li>Settled on a petrol turbo-hybrid as the best balance of range, performance and feasibility, then built the simulator above to test the report's numbers.</li>
+          </ul>
+        </div>
+        <div class="figs">
+          <figure style="padding:22px 20px;background:var(--paper)">
+            <div style="font-family:var(--mono);font-size:12px;color:var(--muted)">Design path</div>
+            <div style="font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,28px);text-transform:uppercase;line-height:1.25;margin-top:8px">Wind-turbine concept <span style="color:var(--red)">✕</span><br>F1-style combustion →<br>Battery-electric →<br>Petrol turbo-hybrid <span style="color:var(--red)">✓</span></div>
+            <div style="font-family:var(--mono);font-size:14px;margin-top:14px">P = ½ · ρ · C<sub>d</sub> · A · v³</div>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sh"><h2>About</h2><span>background</span></div>
+      <div class="cols">
+        <div>
+          <p>I'm a computer science student at the University of Cincinnati. I care about the point where software meets machines that go fast: the data that tells a race engineer what the car is doing, the models that decide how a hybrid spends its energy, and the rules that decide what the car can look like.</p>
+          <p>Outside class I'm Head of Growth and Marketing at AgriMeta, a startup I've worked on since 2021. In high school I ran public awareness programs on student mental health, environmental pollution and women's safety.</p>
+          <h3>How I build</h3>
+          <p>I use AI coding agents as a pair programmer. I set the scope, pick the data sources, decide what "correct" means and write the checks; every figure on these projects is traced to a source or a test.</p>
+        </div>
+        <div>
+          <h3>Toolkit</h3>
+          <dl class="skills">
+            <dt>Languages</dt><dd>Python, JavaScript, HTML/CSS</dd>
+            <dt>Data</dt><dd>FastF1, OpenF1, pandas, NumPy, Plotly, Matplotlib</dd>
+            <dt>Web</dt><dd>FastAPI, three.js, static sites, Vercel, GitHub Pages</dd>
+            <dt>Modelling</dt><dd>Vehicle dynamics, hybrid energy management, dynamic programming, ECMS</dd>
+            <dt>Practice</dt><dd>Automated testing, source-checked data, technical writing</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact" aria-label="Contact">
+  <div class="wrap">
+    <h2>Let's talk<br>motorsport software</h2>
+    <div class="row">
+      <code id="email">payyavulachetan@gmail.com</code>
+      <button type="button" id="copy">Copy email</button>
+      <a class="btn alt" href="https://github.com/Chetan-Payyavula" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">© 2026 Chetan Payyavula. F1 project data from public sources; not affiliated with Formula 1, the FIA or any team.</div></footer>
+
+<script>
+document.getElementById("copy").addEventListener("click", async (e) => {
+  const b = e.currentTarget, t = document.getElementById("email").textContent;
+  try { await navigator.clipboard.writeText(t); b.textContent = "Copied"; }
+  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("email")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected, press Ctrl+C"; }
+  setTimeout(() => (b.textContent = "Copy email"), 2500);
+});
+</script>
+
+</body>
+</html>
