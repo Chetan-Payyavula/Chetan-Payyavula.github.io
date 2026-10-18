@@ -175,15 +175,15 @@ footer{padding-block:20px;font-size:12.5px;color:var(--muted)}
           <div class="no">02 · Full-stack web app</div>
           <h3>Pitwall</h3>
           <p class="one">An F1 telemetry lab: compare any drivers' laps from real timing data, replay them in 3D, and run a live strategy pit wall.</p>
-          <ul class="stack"><li>Python</li><li>FastAPI</li><li>FastF1</li><li>OpenF1</li><li>Plotly</li><li>three.js</li></ul>
+          <ul class="stack"><li>Python</li><li>FastAPI</li><li>FastF1</li><li>OpenF1</li><li>Pyodide</li><li>Plotly</li><li>three.js</li></ul>
           <div class="results"><div><b>53</b><span>automated tests</span></div><div><b>4</b><span>drivers compared at once</span></div><div><b>6</b><span>analysis tabs</span></div></div>
           <ul class="pts">
             <li>Lap comparison from official timing data: speed, throttle, brake and gear traces, lap-time delta, track dominance, braking zones and corner-by-corner analysis. The fastest lap is always the reference.</li>
             <li>Pit wall strategy engine: fuel-corrected tyre-degradation fits, undercut and overcut calls, rejoin position, pit window, safety car and VSC time loss, and an ERS estimate.</li>
             <li>3D lap replay with chase, onboard and TV cameras; race replays from past data, and support for a live OpenF1 feed within its rate limits.</li>
           </ul>
-          <p class="note">Runs on a Python server, so it is shown here with screenshots.</p>
-          <div class="links"><a href="https://github.com/Chetan-Payyavula/pitwall" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
+          <p class="note">The online version runs the same Python analysis in your browser (Pyodide) on 8 recorded sessions; run it locally for any session and live timing.</p>
+          <div class="links"><a href="https://chetan-payyavula.github.io/pitwall/">Open the app ↗</a><a href="https://github.com/Chetan-Payyavula/pitwall" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
         </div>
         <div class="figs">
           <figure><img src="img/pit-telemetry.jpg" alt="Pitwall telemetry tab with speed traces of two drivers and a track map" loading="lazy"><figcaption>Telemetry: speed traces, delta and track position</figcaption></figure>
